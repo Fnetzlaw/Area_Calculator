@@ -12,7 +12,7 @@
         <title>Area of Calculations</title>
     </head>
     <body>
-        <h3>Area Of The Rectangle!</h3>
+        <h3>Area Of The Rectangle is:</h3>
         
         <p>
             <%
@@ -23,6 +23,28 @@
                 }
             %>
             <%= result%>
+        </p>
+        <h3>Area Of The Circle is:</h3>
+        <p>
+            <%
+                result = "";
+                Object res2 = request.getAttribute("CirArea");
+                if (res2 != null) {                
+                     result = res2.toString();
+                }
+            %>
+            <%=result%>
+        </p>
+        <h3>The Length Of Your Missing Side is:</h3>
+        <p>
+            <%
+                result = "";
+                Object res3 = request.getAttribute("TriSide");
+                if (res3 != null) {                
+                     result = res3.toString();
+                }
+            %>
+            <%=result%>
         </p>
     </body>
 </html>
