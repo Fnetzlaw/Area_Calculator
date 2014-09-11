@@ -46,5 +46,10 @@
             %>
             <%=result%>
         </p>
+        <p>
+            <%
+                out.println(getServletConfig().getInitParameter("adminEmail"));
+            %>
+        </p>
     </body>
 </html>

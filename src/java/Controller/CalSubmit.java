@@ -103,7 +103,10 @@ public class CalSubmit extends HttpServlet {
             RequestDispatcher view
                     = request.getRequestDispatcher("result.jsp");
             view.forward(request, response);
-
+                
+            String myContextParam = request.getSession()
+               .getServletContext()
+               .getInitParameter("adminEmail");
         }
 
         // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
